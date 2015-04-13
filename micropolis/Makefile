@@ -31,7 +31,6 @@ SUBST_MESSAGE.fix-x11-ldflags=	Fixing X11 ldflags.
 SUBST_FILES.fix-x11-ldflags=	src/sim/makefile src/tclx/config.mk src/tk/makefile
 SUBST_SED.fix-x11-ldflags=	-e 's|-L/usr/X11R6/lib|${X11_LDFLAGS}|g'
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
