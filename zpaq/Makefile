@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=		zpaq704
-PKGNAME=		zpaq-7.04
+DISTNAME=		zpaq705
+PKGNAME=		zpaq-7.05
 CATEGORIES=		archivers
 MASTER_SITES=		http://mattmahoney.net/dc/
 EXTRACT_SUFX=		.zip
