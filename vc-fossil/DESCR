@@ -1,0 +1,5 @@
+This mini-project is for integrating emacs into fossil. This needs a
+few changes into fossil and needs a new file to be loaded into emacs.
+
+You need emacs version 23.1 or better. This definitely does not work
+with versions 22.*.

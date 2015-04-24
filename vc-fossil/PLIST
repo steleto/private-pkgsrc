@@ -1,0 +1,4 @@
+@comment $NetBSD$
+${EMACS_LISPPREFIX}/vc-fossil/index.wiki
+${EMACS_LISPPREFIX}/vc-fossil/vc-fossil.el
+${EMACS_LISPPREFIX}/vc-fossil/vc-fossil.elc
