@@ -1,7 +1,7 @@
 # $NetBSD$
 
-DISTNAME=		zpaq705
-PKGNAME=		zpaq-7.05
+DISTNAME=		zpaq715
+PKGNAME=		zpaq-7.15
 CATEGORIES=		archivers
 MASTER_SITES=		http://mattmahoney.net/dc/
 EXTRACT_SUFX=		.zip
@@ -12,16 +12,11 @@ COMMENT=		Incremental Journaling Backup Utility and Archiver
 LICENSE=		public-domain
 
 WRKSRC=			${WRKDIR}
-USE_TOOLS+=		pod2man
+NO_CONFIGURE=		yes
+USE_TOOLS+=		gmake pod2man
 USE_LANGUAGES=		c++
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-build:
-	cd ${WRKSRC} && \
-	${CXX} ${CXXFLAGS} ${LDFLAGS} -Dunix zpaq.cpp libzpaq.cpp -pthread -o zpaq
-	cd ${WRKSRC} && \
-	${POD2MAN} zpaq.pod > zpaq.1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/zpaq ${DESTDIR}${PREFIX}/bin
