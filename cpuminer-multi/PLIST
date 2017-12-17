@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/cpuminer
+man/man1/cpuminer.1
+share/examples/cpuminer-multi/cpuminer.conf
