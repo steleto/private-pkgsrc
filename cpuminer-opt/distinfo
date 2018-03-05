@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (cpuminer-opt-3.8.3.3.tar.gz) = 982e06dab93c2407fe308f4c06becc1fbed5c08c
+RMD160 (cpuminer-opt-3.8.3.3.tar.gz) = ce7e3b92da71754a21b8f3ac1a617839549f9807
+SHA512 (cpuminer-opt-3.8.3.3.tar.gz) = 6706930e2a317d54a349a6a5b71cbf4a3a7fb7ff1759376f35884aa21ef947635817c0f17fe82c53685bc652423245fdc25decf9ee23016bf86da47caacc161a
+Size (cpuminer-opt-3.8.3.3.tar.gz) = 1676500 bytes
+SHA1 (patch-algo_yescrypt_sysendian.h) = fa6a1c43fcbf3d690ff708d95d05af57290de240
+SHA1 (patch-algo_yescrypt_yescrypt-platform.h) = f951f710c7f5025b748a4f2d5448c598f1566726
+SHA1 (patch-configure.ac) = d3dd41a81b466e3be918063c2e275c19e5911634
