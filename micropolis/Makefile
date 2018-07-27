@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	micropolis-activity-source
-PKGNAME=	micropolis-1292633511
+PKGNAME=	micropolis-1530263971
 CATEGORIES=	games
 MASTER_SITES=	http://www.donhopkins.com/home/micropolis/
 EXTRACT_SUFX=	.tgz
@@ -12,7 +12,7 @@ COMMENT=	city-building simulation
 LICENSE=	gnu-gpl-v3
 
 PATCH_SITES=	http://git.zerfleddert.de/micropolis/patches/
-PATCHFILES=	micropolis_git-1292633511-6fa8547948f4f5c46552f5d61a999e1943e20391.patch
+PATCHFILES=	micropolis_git-1530263971-cc31822e4ebe54c0109623ac0c5cdf0e3acad755.patch
 PATCH_DIST_STRIP=       -p1
 
 WRKSRC=		${WRKDIR}/micropolis-activity
