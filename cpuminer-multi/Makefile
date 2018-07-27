@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	${GITHUB_PROJECT}-${PKGVERSION_NOREV}
-PKGNAME=	cpuminer-multi-1.3.1
+PKGNAME=	cpuminer-multi-1.3.5
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=tpruvot/}
 
