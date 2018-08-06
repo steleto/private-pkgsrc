@@ -8,8 +8,10 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.donhopkins.com/home/micropolis/
-COMMENT=	city-building simulation
+COMMENT=	City-building simulation
 LICENSE=	gnu-gpl-v3
+
+USE_TOOLS+=	pkg-config
 
 PATCH_SITES=	http://git.zerfleddert.de/micropolis/patches/
 PATCHFILES=	micropolis_git-1530263971-cc31822e4ebe54c0109623ac0c5cdf0e3acad755.patch
