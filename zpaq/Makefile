@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mattmahoney.net/dc/zpaq.html
 COMMENT=		Incremental Journaling Backup Utility and Archiver
-LICENSE=		public-domain
+LICENSE=		mit
 
 WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
@@ -18,9 +18,12 @@ USE_LANGUAGES=		c++
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/zpaq ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/zpaq.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+SUBST_CLASSES+=		fix-env
+SUBST_STAGE.fix-env=	pre-build
+SUBST_MESSAGE.fix-env=	Fixing environment.
+SUBST_FILES.fix-env=	Makefile
+SUBST_SED.fix-env=	-e 's|CXXFLAGS=.*|CXXFLAGS=${CXXFLAGS}|'
+SUBST_SED.fix-env+=	-e 's|PREFIX=.*|PREFIX=${PREFIX}|'
+SUBST_SED.fix-env+=	-e 's|MANDIR=.*|MANDIR=$$(PREFIX)/man|'
 
 .include "../../mk/bsd.pkg.mk"
