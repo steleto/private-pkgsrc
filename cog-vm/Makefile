@@ -57,7 +57,6 @@ do-install:
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../pkgtools/x11-links/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
