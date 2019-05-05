@@ -8,6 +8,8 @@ lib/squeak/${PKGVERSION}/ImmX11Plugin.a
 lib/squeak/${PKGVERSION}/ImmX11Plugin.so
 lib/squeak/${PKGVERSION}/LocalePlugin.a
 lib/squeak/${PKGVERSION}/LocalePlugin.so
+lib/squeak/${PKGVERSION}/Squeak3D.a
+lib/squeak/${PKGVERSION}/Squeak3D.so
 lib/squeak/${PKGVERSION}/SqueakFFIPrims.a
 lib/squeak/${PKGVERSION}/SqueakFFIPrims.so
 lib/squeak/${PKGVERSION}/SqueakSSL.a

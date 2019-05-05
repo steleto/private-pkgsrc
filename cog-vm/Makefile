@@ -5,7 +5,7 @@ PKGNAME=	cog-vm-${PKGVERSION}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSmalltalk/}
 GITHUB_PROJECT=	opensmalltalk-vm
-GITHUB_TAG=	201810190412
+GITHUB_TAG=	201901172323
 PKGVERSION=	5.0-${GITHUB_TAG}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -23,7 +23,9 @@ SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	pre-build
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=	platforms/unix/plugins/SqueakSSL/openssl_overlay.h
-SUBST_SED.fix-paths=	-e "s,@pkglibdir@,'${PREFIX}/lib',g"
+SUBST_FILES.fix-paths+=	platforms/unix/config/configure.ac
+SUBST_FILES.fix-paths+=	platforms/unix/config/make.ext.in
+SUBST_SED.fix-paths=	-e "s,@pkglibdir@,${PREFIX}/lib,g"
 
 SUBST_CLASSES+=		sccs
 SUBST_STAGE.sccs=	pre-build
@@ -31,9 +33,9 @@ SUBST_MESSAGE.sccs=	Set version infomation to the VM.
 SUBST_FILES.sccs=	platforms/Cross/vm/sqSCCSVersion.h
 SUBST_FILES.sccs+=	platforms/Cross/plugins/sqPluginsSCCSVersion.h
 SUBST_SED.sccs=		-e "s,\$$Rev,\$$Rev: ${GITHUB_TAG} ,g"
-SUBST_SED.sccs+=	-e "s,\$$Date,\$$Date: Thu Oct 18 21:12:21 2018 -0700 ,g"
+SUBST_SED.sccs+=	-e "s,\$$Date,\$$Date: Fri Jan 18 00:23:50 2019 +0100 ,g"
 SUBST_SED.sccs+=	-e "s,\$$URL,\$$URL: ${WRKSRC} ,g"
-SUBST_SED.sccs+=	-e "s,\$$CommitHash,\$$CommitHash: 15341b579 ,g"
+SUBST_SED.sccs+=	-e "s,\$$CommitHash,\$$CommitHash: 5a38b3483 ,g"
 
 pre-build:
 	cd ${WRKSRC}/platforms/unix/config && ${MAKE_PROGRAM}
@@ -49,8 +51,14 @@ do-install:
 	cd ${WRKSRC}/products/sqcogspur64linuxht && find lib -type d | while read dir; do \
 		${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/$$dir; \
 	done
-	cd ${WRKSRC}/products/sqcogspur64linuxht && find lib -type f | while read file; do \
+	cd ${WRKSRC}/products/sqcogspur64linuxht && find lib -type f -name "squeak" | while read file; do \
+		${INSTALL_PROGRAM} $$file ${DESTDIR}${PREFIX}/$$file; \
+	done
+	cd ${WRKSRC}/products/sqcogspur64linuxht && find lib -type f -name "*.so" | while read file; do \
 		${INSTALL_LIB} $$file ${DESTDIR}${PREFIX}/$$file; \
+	done
+	cd ${WRKSRC}/products/sqcogspur64linuxht && find lib -type f -name "*.a" | while read file; do \
+		${INSTALL_DATA} $$file ${DESTDIR}${PREFIX}/$$file; \
 	done
 
 .include "../../devel/libuuid/buildlink3.mk"
