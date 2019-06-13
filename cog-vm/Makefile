@@ -14,7 +14,7 @@ COMMENT=	Cross-platform VM for Squeak, Pharo, Cuis, and Newspeak
 LICENSE=	mit
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	autoreconf autoconf automake pkg-config bash
+USE_TOOLS+=	autoreconf autoconf automake pkg-config bash pax
 AUTOCONF_REQD=	2.69
 
 NO_CONFIGURE=	yes
@@ -36,6 +36,8 @@ SUBST_SED.sccs=		-e "s,\$$Rev,\$$Rev: ${GITHUB_TAG} ,g"
 SUBST_SED.sccs+=	-e "s,\$$Date,\$$Date: Fri Jan 18 00:23:50 2019 +0100 ,g"
 SUBST_SED.sccs+=	-e "s,\$$URL,\$$URL: ${WRKSRC} ,g"
 SUBST_SED.sccs+=	-e "s,\$$CommitHash,\$$CommitHash: 5a38b3483 ,g"
+
+NOT_PAX_MPROTECT_SAFE+=	lib/squeak/${PKGVERSION}/squeak
 
 pre-build:
 	cd ${WRKSRC}/platforms/unix/config && ${MAKE_PROGRAM}
