@@ -13,7 +13,7 @@ LICENSE=		mit
 
 WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
-USE_TOOLS+=		gmake pod2man
+USE_TOOLS+=		gmake pod2man pax
 USE_LANGUAGES=		c++
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
@@ -25,5 +25,7 @@ SUBST_FILES.fix-env=	Makefile
 SUBST_SED.fix-env=	-e 's|CXXFLAGS=.*|CXXFLAGS=${CXXFLAGS}|'
 SUBST_SED.fix-env+=	-e 's|PREFIX=.*|PREFIX=${PREFIX}|'
 SUBST_SED.fix-env+=	-e 's|MANDIR=.*|MANDIR=$$(PREFIX)/man|'
+
+NOT_PAX_MPROTECT_SAFE+=	bin/zpaq
 
 .include "../../mk/bsd.pkg.mk"
