@@ -1,0 +1,22 @@
+fstl is a viewer for .stl files.
+
+It is optimized to quickly load and render very high-polygon models.
+
+The Porsche model below is two million triangles. On my mid-range
+laptop, this model loads in one second and renders at a smooth 60+
+frames per second.
+
+For comparison, Meshlab takes several seconds to load and renders at
+about 15 frames per second. More sophisticated software has an even
+larger overhead -- blender took about 12 seconds and locked up while
+loading.
+
+fstl isn't just fast -- it's also attractive. Models are rendered with
+per-face flat shading and anti-aliasing in a smooth color scheme
+reminiscent of Solarized.
+
+Finally, fstl is cross-platform and open-source. Precompiled binaries
+are available for Windows and Mac, and the only dependancy is Qt if
+you want to build it yourself.
+
+As always, the source is available on Github.
