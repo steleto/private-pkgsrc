@@ -1,12 +1,12 @@
 # $NetBSD$
 
 DISTNAME=	opensmalltak-vm
-PKGNAME=	cog-vm-${PKGVERSION}
+PKGNAME=	cog-vm-5.0-${GITHUB_TAG}
+PKGVERSION=	${PKGNAME:C/cog-vm-//}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GITHUB:=OpenSmalltalk/}
 GITHUB_PROJECT=	opensmalltalk-vm
-GITHUB_TAG=	201901172323
-PKGVERSION=	5.0-${GITHUB_TAG}
+GITHUB_TAG=	202003021730
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opensmalltalk.org/
@@ -33,9 +33,9 @@ SUBST_MESSAGE.sccs=	Set version infomation to the VM.
 SUBST_FILES.sccs=	platforms/Cross/vm/sqSCCSVersion.h
 SUBST_FILES.sccs+=	platforms/Cross/plugins/sqPluginsSCCSVersion.h
 SUBST_SED.sccs=		-e "s,\$$Rev,\$$Rev: ${GITHUB_TAG} ,g"
-SUBST_SED.sccs+=	-e "s,\$$Date,\$$Date: Fri Jan 18 00:23:50 2019 +0100 ,g"
-SUBST_SED.sccs+=	-e "s,\$$URL,\$$URL: ${WRKSRC} ,g"
-SUBST_SED.sccs+=	-e "s,\$$CommitHash,\$$CommitHash: 5a38b3483 ,g"
+SUBST_SED.sccs+=	-e "s,\$$Date,\$$Date: Mon 2 Mar 2020 18:30:55 +0100 ,g"
+SUBST_SED.sccs+=	-e "s,\$$URL,\$$URL: `${ID} -un`@`${HOSTNAME_CMD}`:${WRKSRC} ,g"
+SUBST_SED.sccs+=	-e "s,\$$CommitHash,\$$CommitHash: 6a0bc9626 ,g"
 
 NOT_PAX_MPROTECT_SAFE+=	lib/squeak/${PKGVERSION}/squeak
 
@@ -54,7 +54,7 @@ do-install:
 		${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/$$dir; \
 	done
 	cd ${WRKSRC}/products/sqcogspur64linuxht && find lib -type f -name "squeak" | while read file; do \
-		${INSTALL_PROGRAM} $$file ${DESTDIR}${PREFIX}/$$file; \
+		${INSTALL_LIB} $$file ${DESTDIR}${PREFIX}/$$file; \
 	done
 	cd ${WRKSRC}/products/sqcogspur64linuxht && find lib -type f -name "*.so" | while read file; do \
 		${INSTALL_LIB} $$file ${DESTDIR}${PREFIX}/$$file; \
