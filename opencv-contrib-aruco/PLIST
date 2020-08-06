@@ -1,0 +1,7 @@
+@comment $NetBSD$
+include/opencv2/aruco.hpp
+include/opencv2/aruco/charuco.hpp
+include/opencv2/aruco/dictionary.hpp
+lib/libopencv_aruco.so
+lib/libopencv_aruco.so.3.4
+lib/libopencv_aruco.so.${PKGVERSION}
