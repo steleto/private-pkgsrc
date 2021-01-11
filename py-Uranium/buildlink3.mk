@@ -5,7 +5,9 @@ BUILDLINK_TREE+=	py-Uranium
 .if !defined(PY_URANIUM_BUILDLINK3_MK)
 PY_URANIUM_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.py-Uranium+=	py-Uranium>=4.8.0
+.include "../../lang/python/pyversion.mk"
+
+BUILDLINK_API_DEPENDS.py-Uranium+=	${PYPKGPREFIX}-Uranium>=4.8.0
 BUILDLINK_PKGSRCDIR.py-Uranium?=	../../private/py-Uranium
 
 .include "../../math/py-numpy/buildlink3.mk"
