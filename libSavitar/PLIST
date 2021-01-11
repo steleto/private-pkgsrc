@@ -1,0 +1,23 @@
+@comment $NetBSD$
+include/Savitar/Face.h
+include/Savitar/MeshData.h
+include/Savitar/Namespace.h
+include/Savitar/SavitarExport.h
+include/Savitar/Scene.h
+include/Savitar/SceneNode.h
+include/Savitar/ThreeMFParser.h
+include/Savitar/Types.h
+include/Savitar/Vertex.h
+include/pugiconfig.hpp
+include/pugixml.hpp
+lib/cmake/Savitar/Savitar-targets-noconfig.cmake
+lib/cmake/Savitar/Savitar-targets.cmake
+lib/cmake/Savitar/SavitarConfig.cmake
+lib/cmake/Savitar/SavitarConfigVersion.cmake
+lib/cmake/pugixml/pugixml-config-noconfig.cmake
+lib/cmake/pugixml/pugixml-config.cmake
+lib/libSavitar.so
+lib/libSavitar.so.0
+lib/libSavitar.so.0.1.2
+lib/libpugixml.a
+${PYSITELIB}/Savitar.so
