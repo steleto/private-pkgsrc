@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (pynest2d/4.8.0.tar.gz) = d048759e3289c44059dcdac5cf8a8623bae52556
+RMD160 (pynest2d/4.8.0.tar.gz) = b4825f065f6214175f2a84d9cb147511b7cf2c03
+SHA512 (pynest2d/4.8.0.tar.gz) = 1304450f94589b5212f11d83fb228f0deb919698b44b1651f248105c23b65cf3d233e67526bbfb47df74b9b18d0c465f4188d02a0a6941564b551f50d9a3c84f
+Size (pynest2d/4.8.0.tar.gz) = 18174 bytes
+SHA1 (patch-cmake_FindClipper.cmake) = a047f7365a95a6a5ce3a8d12723d2e450c7b113d
+SHA1 (patch-cmake_FindNLopt.cmake) = 05debe7fc437c85a0cde2f9f4e558b07a350baba
