@@ -1,0 +1,38 @@
+# $NetBSD$
+
+GITHUB_PROJECT=	Cura
+GITHUB_TAG=	4.8.0
+DISTNAME=	${GITHUB_TAG}
+PKGNAME=	${PYPKGPREFIX}-${GITHUB_PROJECT}-${DISTNAME}
+CATEGORIES=	private
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Ultimaker/}
+DIST_SUBDIR=	${GITHUB_PROJECT}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/Ultimaker/Cura/
+COMMENT=	3D printer / slicing GUI built on top of the Uranium framework
+LICENSE=	gnu-lgpl-v3
+
+USE_CMAKE=		yes
+USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
+
+DEPENDS+=	${PYPKGPREFIX}-serial-[0-9]*:../../comms/py-serial
+DEPENDS+=	${PYPKGPREFIX}-zeroconf-[0-9]*:../../net/py-zeroconf
+DEPENDS+=	${PYPKGPREFIX}-trimesh-[0-9]*:../../wip/py-trimesh
+DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
+
+REPLACE_PYTHON+=	cura_app.py
+
+PY_PATCHPLIST=	YES
+
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
+.include "../../private/CuraEngine/buildlink3.mk"
+.include "../../private/fdm_materials/buildlink3.mk"
+.include "../../private/libSavitar/buildlink3.mk"
+.include "../../private/py-Uranium/buildlink3.mk"
+.include "../../x11/qt5-qtquickcontrols/buildlink3.mk"
+.include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
