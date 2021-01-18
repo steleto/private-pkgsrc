@@ -22,6 +22,9 @@ SUBST_MESSAGE.sip=	Rename py-sip name.
 SUBST_FILES.sip=	cmake/FindSIP.cmake
 SUBST_SED.sip=		-e 's|\(SIP_EXECUTABLE sip\)|\1${PYVERSSUFFIX}|'
 
+PY_PATCHPLIST=	YES
+
+.include "../../lang/python/extension.mk"
 .include "../../devel/protobuf/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
