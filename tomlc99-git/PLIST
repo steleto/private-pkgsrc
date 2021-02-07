@@ -1,0 +1,4 @@
+@comment $NetBSD$
+include/toml.h
+lib/libtoml.a
+lib/libtoml.so
