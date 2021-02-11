@@ -21,6 +21,11 @@ DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-shapely-[0-9]*:../../wip/py-shapely
 
 PY_PATCHPLIST=YES
+
+.include "../../devel/cmake/version.mk"
+
+PLIST_SUBST+=	CMAKE_API=${CMAKE_API}
+
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../private/libArcus/buildlink3.mk"
