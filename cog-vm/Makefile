@@ -24,7 +24,6 @@ SUBST_STAGE.fix-paths=	pre-build
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=	platforms/unix/plugins/SqueakSSL/openssl_overlay.h
 SUBST_FILES.fix-paths+=	platforms/unix/config/configure.ac
-SUBST_FILES.fix-paths+=	platforms/unix/config/make.ext.in
 SUBST_SED.fix-paths=	-e "s,@pkglibdir@,${PREFIX}/lib,g"
 
 SUBST_CLASSES+=		sccs
