@@ -33,6 +33,7 @@ PY_PATCHPLIST=	YES
 .include "../../private/fdm_materials/buildlink3.mk"
 .include "../../private/libSavitar/buildlink3.mk"
 .include "../../private/py-Uranium/buildlink3.mk"
+.include "../../private/py-pynest2d/buildlink3.mk"
 .include "../../x11/qt5-qtquickcontrols/buildlink3.mk"
 .include "../../x11/qt5-qtquickcontrols2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
