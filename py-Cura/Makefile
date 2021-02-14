@@ -24,6 +24,12 @@ DEPENDS+=	qt5-qtgraphicaleffects-[0-9]*:../../x11/qt5-qtgraphicaleffects
 
 REPLACE_PYTHON+=	cura_app.py
 
+SUBST_CLASSES+=			fix-version
+SUBST_STAGE.fix-version=	pre-configure
+SUBST_MESSAGE.fix-version=	Fixing Cura version.
+SUBST_FILES.fix-version=	CMakeLists.txt
+SUBST_SED.fix-version=		-e "s,\(CURA_VERSION\) \"master\",\1 \"${GITHUB_TAG}\",g"
+
 PY_PATCHPLIST=	YES
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
