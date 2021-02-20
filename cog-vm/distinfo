@@ -19,3 +19,4 @@ SHA1 (patch-platforms_unix_vm_include__ucontext.h) = f4e944f3f1a74a363157efe4cb1
 SHA1 (patch-platforms_unix_vm_sqUnixITimerHeartbeat.c) = 96b6f1094b07c9456f9b6cc56b2bc7237e6c24f0
 SHA1 (patch-platforms_unix_vm_sqUnixITimerTickerHeartbeat.c) = 2714da2e76226d5194a07ad1ea5ead3edc39d7fd
 SHA1 (patch-platforms_unix_vm_sqUnixMain.c) = a7703a1ebe9410c9d4f0230f9aa8537f3f8260d8
+SHA1 (patch-spur64src_vm_cogitX64SysV.c) = e1759c6a501bd611a3796134e71fcb37ab27ace8
