@@ -16,13 +16,15 @@ lib/pharo/${PKGVERSION}/JPEGReadWriter2Plugin.a
 lib/pharo/${PKGVERSION}/JPEGReadWriter2Plugin.so
 lib/pharo/${PKGVERSION}/JPEGReaderPlugin.a
 lib/pharo/${PKGVERSION}/JPEGReaderPlugin.so
-lib/pharo/${PKGVERSION}/PharoV50.sources
 lib/pharo/${PKGVERSION}/RePlugin.a
 lib/pharo/${PKGVERSION}/RePlugin.so
 lib/pharo/${PKGVERSION}/SqueakSSL.a
 lib/pharo/${PKGVERSION}/SqueakSSL.so
 lib/pharo/${PKGVERSION}/SurfacePlugin.a
 lib/pharo/${PKGVERSION}/SurfacePlugin.so
+lib/pharo/${PKGVERSION}/libSDL2-2.0.so.0
+lib/pharo/${PKGVERSION}/libc.so.6
+lib/pharo/${PKGVERSION}/libgit2.so
 lib/pharo/${PKGVERSION}/pharo
 lib/pharo/${PKGVERSION}/vm-display-X11.a
 lib/pharo/${PKGVERSION}/vm-display-X11.so

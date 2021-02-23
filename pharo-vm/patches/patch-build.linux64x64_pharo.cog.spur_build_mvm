@@ -1,13 +1,18 @@
 $NetBSD$
 
---- build.linux64x64/pharo.cog.spur/build/mvm.orig	2018-11-08 15:06:32.039289404 +0000
+--- build.linux64x64/pharo.cog.spur/build/mvm.orig	2020-03-02 17:30:55.000000000 +0000
 +++ build.linux64x64/pharo.cog.spur/build/mvm
-@@ -1,7 +1,7 @@
+@@ -1,11 +1,11 @@
  #!/usr/bin/env bash
  set -ex
  # PharoVM with VM profiler and threaded heartbeat
 -THIRDPARTYLIBS="libsdl2 openssl libssh2 libgit2"
-+#THIRDPARTYLIBS="libsdl2 openssl libssh2 libgit2"
- INSTALLDIR=cogspur64linuxht
++# THIRDPARTYLIBS="libsdl2 openssl libssh2 libgit2"
+ INSTALLDIR=phcogspur64linuxht
  
  # Some gcc versions create a broken VM using -O2
+-OPT="-g -O2 -DNDEBUG -DDEBUGVM=0 -DPharoVM"
++OPT="-g -O1 -DDEBUGVM=1 -DPharoVM"
+ 
+ if [ $# -ge 1 ]; then
+ 	INSTALLDIR="$1"; shift
