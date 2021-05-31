@@ -1,0 +1,13 @@
+$NetBSD$
+
+SHA1 (massivethreads/1.00.tar.gz) = 07edcd5bc38dc90dc534f60c7b47a9355c896b81
+RMD160 (massivethreads/1.00.tar.gz) = 7a431061a36a173883b8076ea1b7dba2af1fa2d6
+SHA512 (massivethreads/1.00.tar.gz) = aaea978bf0d41a9a97ccf0d8c5be318feb1e547e72f7dea267ddc3a18d653831465d531c193f79e8f75d75b12945d3dab882d93596d90dda7f70676fe87ea72e
+Size (massivethreads/1.00.tar.gz) = 2876161 bytes
+SHA1 (patch-configure.ac) = e207f8441de4d032c3e6b6619b40fee0c45deb89
+SHA1 (patch-src_myth__real.c) = 53b28117ddbd7105b2aa7a1f1476c54d6777a1c4
+SHA1 (patch-src_myth__real.h) = c661c867212e90dedad83a9a2ba6790ea87f0941
+SHA1 (patch-src_myth__wrap__malloc.c) = 5945aff9fa555a1e6ac2f5ade5661492065e8a65
+SHA1 (patch-src_myth__wrap__pthread.c) = 286aebe9d1aadebb7aa8e0c8db1956b28d20aaec
+SHA1 (patch-src_profiler_dag__recorder__inl.h) = 14bc5b7374a68ef4fa4321c8309c06e7df291226
+SHA1 (patch-tests_Makefile.am) = f41aac1863893b9644b9d1326a51d225738ec1e7

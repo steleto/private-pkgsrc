@@ -1,0 +1,35 @@
+$NetBSD$
+
+Add function check
+
+--- configure.ac.orig	2019-07-17 10:58:11.000000000 +0000
++++ configure.ac
+@@ -369,6 +369,28 @@ AC_CHECK_FUNCS([pthread_mutexattr_getrob
+ [],[pthread_mutexattr_getrobust etc.])])
+ # define HAVE_PTHREAD_MUTEXATTR_ROBUST 1
+ 
++AC_CHECK_FUNCS([pthread_mutexattr_getpshared],
++[AC_DEFINE_UNQUOTED([HAVE_PTHREAD_MUTEXATTR_PSHARED],
++[],[pthread_mutexattr_getpshared etc.])])
++# define HAVE_PTHREAD_MUTEXATTR_PSHARED 1
++
++AC_CHECK_FUNCS([pthread_rwlockattr_getpshared],
++[AC_DEFINE_UNQUOTED([HAVE_PTHREAD_RWLOCKATTR_PSHARED],
++[],[pthread_rwlockattr_getpshared etc.])])
++# define HAVE_PTHREAD_RWLOCKATTR_PSHARED 1
++
++AC_CHECK_FUNCS([pthread_condattr_getpshared],
++[AC_DEFINE_UNQUOTED([HAVE_PTHREAD_CONDATTR_PSHARED],
++[],[pthread_condattr_getpshared etc.])])
++# define HAVE_PTHREAD_CONDATTR_PSHARED 1
++
++AC_CHECK_FUNCS([pthread_barrierattr_getpshared],
++[AC_DEFINE_UNQUOTED([HAVE_PTHREAD_BARRIERATTR_PSHARED],
++[],[pthread_barrierattr_getpshared etc.])])
++# define HAVE_PTHREAD_BARRIERATTR_PSHARED 1
++
++AC_CHECK_FUNCS([sched_getcpu])
++# define HAVE_SCHED_GETCPU 1
+ 
+ # -----------------------------
+ # declarations

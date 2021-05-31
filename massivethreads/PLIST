@@ -1,0 +1,24 @@
+@comment $NetBSD$
+bin/dag2any
+bin/drview
+include/dag_recorder.h
+include/dag_recorder_impl.h
+include/dag_recorder_inl.h
+include/mtbb/parallel_for.h
+include/mtbb/parallel_reduce.h
+include/mtbb/task_group.h
+include/mtbb/task_scheduler_init.h
+include/myth.h
+include/myth/myth.h
+include/myth/myth_sleep_queue.h
+include/myth/myth_spinlock.h
+include/papi_counters.h
+include/tpswitch/cilk_dr.cilkh
+include/tpswitch/cilkplus_dr.h
+include/tpswitch/omp_dr.h
+include/tpswitch/serial_dr.h
+include/tpswitch/tbb_dr.h
+include/tpswitch/tpswitch.h
+lib/libdr.la
+lib/libmyth-dl.la
+lib/libmyth.la
