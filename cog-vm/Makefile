@@ -16,6 +16,7 @@ LICENSE=	mit
 USE_LANGUAGES=	c
 USE_TOOLS+=	autoreconf autoconf automake pkg-config bash pax
 AUTOCONF_REQD=	2.69
+USE_LIBTOOL=	yes
 
 NO_CONFIGURE=	yes
 
