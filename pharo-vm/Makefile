@@ -11,6 +11,8 @@ HOMEPAGE=	https://pharo.org/
 COMMENT=	VM used by Pharo
 LICENSE=	mit
 
+ONLY_FOR_PLATFORM=	NetBSD-[0-9]*-x86_64
+
 WRKSRC=		${WRKDIR}/pharo-vm
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
