@@ -15,6 +15,10 @@ HOMEPAGE=	http://files.pharo.org/image/90/
 COMMENT=	Pure object-oriented programming language and a powerful environment
 LICENSE=	mit AND apache-2.0
 
+DEPENDS+=	pharo-vm-[0-9]*:../../private/pharo-vm
+
+ONLY_FOR_PLATFORM=	NetBSD-[0-9]*-x86_64
+
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 
