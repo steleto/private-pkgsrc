@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (fdm_materials/4.8.0.tar.gz) = 705521d1eaf03f9f5ee18b394cbdeb205e0d9127
-RMD160 (fdm_materials/4.8.0.tar.gz) = 387ffeca2ff5986bc6c73041a25f336f434f509e
-SHA512 (fdm_materials/4.8.0.tar.gz) = 6e2812dc61ad00437d4c7943c3746cd915e1e49edef49f89ea2c4ca4cf023d67c400d1ae1e3c40923928d20ac09b184fc0632b828900b6236f9dfd346f19036d
-Size (fdm_materials/4.8.0.tar.gz) = 43850 bytes
+SHA1 (fdm_materials/4.10.0.tar.gz) = 18f62237ac48b507f682ec65bdbf35dfe7d390ff
+RMD160 (fdm_materials/4.10.0.tar.gz) = 344b371789795e4f170e28f56ff138228147a55d
+SHA512 (fdm_materials/4.10.0.tar.gz) = 629726b88b56e7e1ae20c60f19f86d5bdb33b0844b9309f1bd3ac0cb294b586ed658432072cca4c8b3d1d990d5d4a21aa5f426d7ef1d580bc1f44a0a8cccb2ff
+Size (fdm_materials/4.10.0.tar.gz) = 52186 bytes
