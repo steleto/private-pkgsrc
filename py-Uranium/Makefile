@@ -20,6 +20,9 @@ USE_LANGUAGES=		# none
 DEPENDS+=	${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-shapely-[0-9]*:../../wip/py-shapely
 
+pre-install:
+	find ${WRKSRC} -type f -name "*.orig" | xargs ${RM}
+
 PY_PATCHPLIST=YES
 
 .include "../../devel/cmake/version.mk"
