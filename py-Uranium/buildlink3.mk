@@ -7,7 +7,7 @@ PY_URANIUM_BUILDLINK3_MK:=
 
 .include "../../lang/python/pyversion.mk"
 
-BUILDLINK_API_DEPENDS.py-Uranium+=	${PYPKGPREFIX}-Uranium>=4.8.0
+BUILDLINK_API_DEPENDS.py-Uranium+=	${PYPKGPREFIX}-Uranium>=4.10.0
 BUILDLINK_PKGSRCDIR.py-Uranium?=	../../private/py-Uranium
 
 .include "../../math/py-numpy/buildlink3.mk"

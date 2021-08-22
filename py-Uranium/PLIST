@@ -3,6 +3,7 @@ ${PYSITELIB}/UM/Application.py
 ${PYSITELIB}/UM/Backend/Backend.py
 ${PYSITELIB}/UM/Backend/SignalSocket.py
 ${PYSITELIB}/UM/Backend/__init__.py
+${PYSITELIB}/UM/CentralFileStorage.py
 ${PYSITELIB}/UM/ColorGenerator.py
 ${PYSITELIB}/UM/ConfigurationErrorMessage.py
 ${PYSITELIB}/UM/Controller.py
@@ -17,6 +18,7 @@ ${PYSITELIB}/UM/FileHandler/FileWriter.py
 ${PYSITELIB}/UM/FileHandler/ReadFileJob.py
 ${PYSITELIB}/UM/FileHandler/WriteFileJob.py
 ${PYSITELIB}/UM/FileHandler/__init__.py
+${PYSITELIB}/UM/FileProvider.py
 ${PYSITELIB}/UM/FlameProfiler.py
 ${PYSITELIB}/UM/InputDevice.py
 ${PYSITELIB}/UM/Job.py
@@ -45,6 +47,7 @@ ${PYSITELIB}/UM/Mesh/__init__.py
 ${PYSITELIB}/UM/Message.py
 ${PYSITELIB}/UM/MimeTypeDatabase.py
 ${PYSITELIB}/UM/Operations/AddSceneNodeOperation.py
+${PYSITELIB}/UM/Operations/GravityOperation.py
 ${PYSITELIB}/UM/Operations/GroupedOperation.py
 ${PYSITELIB}/UM/Operations/LayFlatOperation.py
 ${PYSITELIB}/UM/Operations/MirrorOperation.py
@@ -60,6 +63,7 @@ ${PYSITELIB}/UM/OutputDevice/OutputDevice.py
 ${PYSITELIB}/UM/OutputDevice/OutputDeviceError.py
 ${PYSITELIB}/UM/OutputDevice/OutputDeviceManager.py
 ${PYSITELIB}/UM/OutputDevice/OutputDevicePlugin.py
+${PYSITELIB}/UM/OutputDevice/ProjectOutputDevice.py
 ${PYSITELIB}/UM/OutputDevice/__init__.py
 ${PYSITELIB}/UM/PackageManager.py
 ${PYSITELIB}/UM/Platform.py
@@ -74,6 +78,7 @@ ${PYSITELIB}/UM/Qt/Bindings/Bindings.py
 ${PYSITELIB}/UM/Qt/Bindings/ContainerProxy.py
 ${PYSITELIB}/UM/Qt/Bindings/ControllerProxy.py
 ${PYSITELIB}/UM/Qt/Bindings/ExtensionModel.py
+${PYSITELIB}/UM/Qt/Bindings/FileProviderModel.py
 ${PYSITELIB}/UM/Qt/Bindings/MainWindow.py
 ${PYSITELIB}/UM/Qt/Bindings/OpenGLContextProxy.py
 ${PYSITELIB}/UM/Qt/Bindings/OperationStackProxy.py
@@ -81,6 +86,7 @@ ${PYSITELIB}/UM/Qt/Bindings/OutputDeviceManagerProxy.py
 ${PYSITELIB}/UM/Qt/Bindings/OutputDevicesModel.py
 ${PYSITELIB}/UM/Qt/Bindings/PointingRectangle.py
 ${PYSITELIB}/UM/Qt/Bindings/PreferencesProxy.py
+${PYSITELIB}/UM/Qt/Bindings/ProjectOutputDevicesModel.py
 ${PYSITELIB}/UM/Qt/Bindings/ResourcesProxy.py
 ${PYSITELIB}/UM/Qt/Bindings/SelectionProxy.py
 ${PYSITELIB}/UM/Qt/Bindings/StageModel.py
@@ -202,7 +208,14 @@ lib/uranium/plugins/FileHandlers/OBJReader/OBJReader.py
 lib/uranium/plugins/FileHandlers/OBJReader/__init__.py
 lib/uranium/plugins/FileHandlers/OBJReader/plugin.json
 lib/uranium/plugins/FileHandlers/OBJReader/tests/TestOBJReader.py
+lib/uranium/plugins/FileHandlers/OBJReader/tests/negative_indexed.obj
+lib/uranium/plugins/FileHandlers/OBJReader/tests/negative_interweaved.obj
 lib/uranium/plugins/FileHandlers/OBJReader/tests/sphere.obj
+lib/uranium/plugins/FileHandlers/OBJReader/tests/vertex_duplicated.obj
+lib/uranium/plugins/FileHandlers/OBJReader/tests/vertex_indexed.obj
+lib/uranium/plugins/FileHandlers/OBJReader/tests/vertex_normal_indexed.obj
+lib/uranium/plugins/FileHandlers/OBJReader/tests/vertex_texture_indexed.obj
+lib/uranium/plugins/FileHandlers/OBJReader/tests/vertex_texture_normal_indexed.obj
 lib/uranium/plugins/FileHandlers/OBJWriter/OBJWriter.py
 lib/uranium/plugins/FileHandlers/OBJWriter/__init__.py
 lib/uranium/plugins/FileHandlers/OBJWriter/plugin.json
