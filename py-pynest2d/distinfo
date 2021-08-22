@@ -1,9 +1,9 @@
 $NetBSD$
 
-SHA1 (pynest2d/4.8.0.tar.gz) = d048759e3289c44059dcdac5cf8a8623bae52556
-RMD160 (pynest2d/4.8.0.tar.gz) = b4825f065f6214175f2a84d9cb147511b7cf2c03
-SHA512 (pynest2d/4.8.0.tar.gz) = 1304450f94589b5212f11d83fb228f0deb919698b44b1651f248105c23b65cf3d233e67526bbfb47df74b9b18d0c465f4188d02a0a6941564b551f50d9a3c84f
-Size (pynest2d/4.8.0.tar.gz) = 18174 bytes
+SHA1 (pynest2d/4.10.0.tar.gz) = 9992743c92ffac2580d5970dd3b30bda39a9c580
+RMD160 (pynest2d/4.10.0.tar.gz) = fa497e52b5f1c59635b754f03c2e662fea5ff531
+SHA512 (pynest2d/4.10.0.tar.gz) = 62a3c6266bf3c4e7f806d9674debe6872917af422443dd5e9c54a430bf95190fb00cf6dd3fd4e66572f266a673f4cf1500a3d42565cfd1cf2ce4e288b7db2acc
+Size (pynest2d/4.10.0.tar.gz) = 18447 bytes
 SHA1 (patch-CMakeLists.txt) = f5a15887de0735655fe1d9e5051bc3e5121742c4
 SHA1 (patch-cmake_FindClipper.cmake) = a047f7365a95a6a5ce3a8d12723d2e450c7b113d
 SHA1 (patch-cmake_FindNLopt.cmake) = 05debe7fc437c85a0cde2f9f4e558b07a350baba

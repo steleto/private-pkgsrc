@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	py-pynest2d
 .if !defined(PY_PYNEST2D_BUILDLINK3_MK)
 PY_PYNEST2D_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.py-pynest2d+=	${PYPKGPREFIX}-pynest2d>=4.8.0
+BUILDLINK_API_DEPENDS.py-pynest2d+=	${PYPKGPREFIX}-pynest2d>=4.10.0
 BUILDLINK_PKGSRCDIR.py-pynest2d?=	../../private/py-pynest2d
 
 .include "../../private/libnest2d-ultimaker/buildlink3.mk"
