@@ -5,7 +5,7 @@ BUILDLINK_TREE+=	CuraEngine
 .if !defined(CURAENGINE_BUILDLINK3_MK)
 CURAENGINE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.CuraEngine+=	CuraEngine>=4.8.0
+BUILDLINK_API_DEPENDS.CuraEngine+=	CuraEngine>=4.10.0
 BUILDLINK_PKGSRCDIR.CuraEngine?=	../../private/CuraEngine
 
 .include "../../devel/protobuf/buildlink3.mk"

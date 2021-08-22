@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (CuraEngine/4.8.0.tar.gz) = f82ed58a850c2f9c66b2e6ac96ebec2f46e91f01
-RMD160 (CuraEngine/4.8.0.tar.gz) = 62857855cc1f1b617ed83c92d14a0436dce158eb
-SHA512 (CuraEngine/4.8.0.tar.gz) = be0d12cfe61932bf03dde61df8fb7f31cbd0aef6a44292130a7a67e318891f37db685722ba5d3cf66e88d4ff1de64ac86be5e494b750f8f7ff4b52d7976cb670
-Size (CuraEngine/4.8.0.tar.gz) = 1690082 bytes
+SHA1 (CuraEngine/4.10.0.tar.gz) = d5c16a63487cf63a4c07d0cdaf85d838fe1801a8
+RMD160 (CuraEngine/4.10.0.tar.gz) = d5add07457bd0cb7bc622f18d1c11cefa4f3f810
+SHA512 (CuraEngine/4.10.0.tar.gz) = 45d32be165da98c945c71b2f803a68e06b60eeacf9ad7fcbdde2659cb05455c8f45d69939662de086348129b0d3a40c484819915aa0c6953937a48d53848b652
+Size (CuraEngine/4.10.0.tar.gz) = 1694276 bytes
