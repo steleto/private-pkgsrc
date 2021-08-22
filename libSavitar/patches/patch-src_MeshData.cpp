@@ -9,7 +9,7 @@ libraries, and also fixes the includes for pugixml.hpp to actually use
 the include path added by find_package/add_subdirectory instead of a
 hardcoded relative path.
 
---- src/MeshData.cpp.orig	2020-10-09 16:43:31.000000000 +0000
+--- src/MeshData.cpp.orig	2021-05-10 11:47:11.000000000 +0000
 +++ src/MeshData.cpp
 @@ -17,7 +17,7 @@
   */
@@ -20,16 +20,7 @@ hardcoded relative path.
  #include <cstring>
  #include <iostream>
  #include <stdexcept> //For std::runtime_error.
-@@ -97,7 +97,7 @@ bytearray MeshData::getFlatVerticesAsByt
-         int v1 = faces.at(i).getV1();
-         int v2 = faces.at(i).getV2();
-         int v3 = faces.at(i).getV3();
--        
-+
-         // Add vertices for face 1
-         float x = vertices.at(v1).getX();
-         float y = vertices.at(v1).getY();
-@@ -200,6 +200,3 @@ std::vector< Vertex > MeshData::getVerti
+@@ -222,6 +222,3 @@ std::vector< Vertex > MeshData::getVerti
  {
      return vertices;
  }

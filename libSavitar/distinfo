@@ -1,11 +1,11 @@
 $NetBSD$
 
-SHA1 (libSavitar/4.8.0.tar.gz) = 936fab470eacc4b6a25f3f43aeb7fcbe52834262
-RMD160 (libSavitar/4.8.0.tar.gz) = beadb313a037870c5661101e584928e2fd2f3ff4
-SHA512 (libSavitar/4.8.0.tar.gz) = 65d31986b120c9e717b10d0bac420f2582d9f1b44051d88f89475408d1f7997e144001c61f180eac554de33f1f8c1ec9555a6c23bdd797315624f57030f7ec8c
-Size (libSavitar/4.8.0.tar.gz) = 99030 bytes
+SHA1 (libSavitar/4.10.0.tar.gz) = 362e1f3b9ad62857518689b277becc1e725b9d52
+RMD160 (libSavitar/4.10.0.tar.gz) = c7fdbb99662ee4ad28075d935bb20a8c9899daad
+SHA512 (libSavitar/4.10.0.tar.gz) = a327c310248b20a7cd2da661a76f259e7b5a5a30d521314bef54d0cae96bc152189df039ba9f385288881cbfa6b21e721389a5152bc2e5be8f85abe79ebeac4e
+Size (libSavitar/4.10.0.tar.gz) = 100735 bytes
 SHA1 (patch-CMakeLists.txt) = ba38f18ee294393b64959907e004804634ce6d84
-SHA1 (patch-src_MeshData.cpp) = 52dee92fe51223b2091338c011dfcb06d2179807
+SHA1 (patch-src_MeshData.cpp) = 0569b56d3e7e005bd82e32ceb473db137a482c51
 SHA1 (patch-src_Namespace.cpp) = 60fd4cae95dbbef303fedc9672f3d2f0d653cb90
 SHA1 (patch-src_Scene.cpp) = db8d6407d6b27ed99636a08fdc6d9007194800b7
 SHA1 (patch-src_SceneNode.cpp) = 5516686d6706bc555490b0e4a6b42a44848fa2fb
