@@ -4,7 +4,22 @@ Exclude undefined function.
 
 --- src/profiler/dag_recorder_inl.h.orig	2019-07-17 10:58:11.000000000 +0000
 +++ src/profiler/dag_recorder_inl.h
-@@ -638,6 +638,7 @@ extern "C" {
+@@ -497,6 +497,14 @@ extern "C" {
+     return u;
+   }
+ 
++#elif defined(__arm__)
++
++  static unsigned long long dr_rdtsc(void) {
++    unsigned long long u;
++    asm volatile("mrrc p15, 1, %Q0, %R0, c14" : "=r" (u));
++    return u;
++  }
++
+ #else
+   
+   static unsigned long long dr_rdtsc() {
+@@ -638,6 +646,7 @@ extern "C" {
      return t;
    }
  
@@ -12,7 +27,7 @@ Exclude undefined function.
  #if __cplusplus 
    extern "C" {
  #endif
-@@ -645,13 +646,18 @@ extern "C" {
+@@ -645,13 +654,18 @@ extern "C" {
  #if __cplusplus 
    }
  #endif
