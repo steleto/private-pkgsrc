@@ -57,6 +57,11 @@ CMAKE_ARGS+=		-DBUILD_opencv_ximgproc=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_xobjdetect=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_xphoto=OFF
 
+# XXX: INSTALL_DIRS currently do not work as desired in cmake/build.mk.
+USE_CMAKE=	yes
+pre-configure:
+	${MKDIR} ${WRKSRC}/build
+
 BUILDLINK_API_DEPENDS.opencv+=	opencv>=${PKGVERSION_NOREV}
 .include "../../graphics/opencv/buildlink3.mk"
 .include "../../lang/python/extension.mk"
