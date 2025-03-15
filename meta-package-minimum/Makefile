@@ -8,7 +8,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	asteria.at@gmail.com
 HOMEPAGE=	# empty
-COMMENT=	Meta-package for private minimum packages
+COMMENT=	Personal minimum package collection
 
 META_PACKAGE=	yes
 
@@ -32,6 +32,7 @@ DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 # pkgtools
 DEPENDS+=	pkgin-[0-9]*:../../pkgtools/pkgin
+DEPENDS+=	pkg_alternatives-[0-9]*:../../pkgtools/pkg_alternatives
 
 # security
 DEPENDS+=	mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-openssl

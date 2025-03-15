@@ -8,7 +8,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	asteria.at@gmail.com
 HOMEPAGE=	# empty
-COMMENT=	Meta-package for private pi2 server packages
+COMMENT=	Personal package collection for "kura"
 
 META_PACKAGE=	yes
 
@@ -20,6 +20,7 @@ DEPENDS+=	sox-[0-9]*:../../audio/sox
 
 # databases
 DEPENDS+=	openldap-[0-9]*:../../databases/openldap
+DEPENDS+=	postgresql16-[0-9]*:../../databases/postgresql16
 
 # devel
 DYEPENDS+=	${PHP_PKG_PREFIX}-composer-[0-9]*:../../devel/php-composer
@@ -29,6 +30,7 @@ DYEPENDS+=	ccache-[0-9]*:../../devel/ccache
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 DEPENDS+=	pngquant-[0-9]*:../../graphics/pngquant
+DEPENDS+=	${PHP_PKG_PREFIX}-imagick-[0-9]*:../../graphics/${PHP_PKG_PREFIX}-imagick
 
 # meta-pkgs
 DEPENDS+=	${PHP_PKG_PREFIX}-extensions-[0-9]*:../../meta-pkgs/${PHP_PKG_PREFIX}-extensions
