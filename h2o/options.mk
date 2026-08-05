@@ -10,9 +10,17 @@ PLIST_VARS+=	mruby
 
 .if !empty(PKG_OPTIONS:Mmruby)
 .include "../../lang/ruby/buildlink3.mk"
-CONFIGURE_ARGS+=        --WITH_MRUBY=on
-USE_TOOLS+=		bison
+CMAKE_CONFIGURE_ARGS+=	-DWITH_MRUBY=on
 PLIST.mruby=		yes
+BUILDLINK_TARGETS+=	buildlink-bin-rake
+
+buildlink-bin-rake:
+	${RUN} \
+	f=${BUILDLINK_PREFIX.${RUBY_BASE}}"/bin/rake${RUBY_SUFFIX}"; \
+	if ${TEST} -f $$f; then \
+		${RM} -f ${BUILDLINK_DIR}/bin/rake; \
+		${LN} -s $$f ${BUILDLINK_DIR}/bin/rake; \
+	fi
 .else
 CONFIGURE_ARGS+=        --WITH_MRUBY=off
 .endif

@@ -35,10 +35,11 @@ REPLACE_PERL=		share/h2o/*
 
 .include "options.mk"
 
+.include "../../archivers/brotli/buildlink3.mk"
+.include "../../archivers/zstd/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../devel/libuv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/libyaml/buildlink3.mk"
 .include "../../www/wslay/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
