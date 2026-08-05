@@ -1,0 +1,12 @@
+tomlc17 parses TOML documents into an in-memory tree structure for
+straightforward navigation. It is optimized for clean integration and
+efficient execution, utilizing a single-pass scanner, a dedicated
+string memory pool, and safe recursive teardowns.
+
+- Compliance: Fully implements TOML v1.1 and passes the standard
+  toml-test validation suite.
+- Compatibility: Written in C17. Fully compatible with C99 and C++.
+- Modern C++ Support: Includes dedicated C++20 accessors
+  (see README_CXX.md).
+- Zero-Friction Integration: Amalgamated design. Simply drop tomlc17.h
+  and tomlc17.c into your source tree, or build it as a library.

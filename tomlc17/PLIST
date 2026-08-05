@@ -1,0 +1,5 @@
+@comment $NetBSD$
+include/tomlc17.h
+include/tomlcpp.hpp
+lib/libtomlc17.a
+lib/pkgconfig/libtomlc17.pc
