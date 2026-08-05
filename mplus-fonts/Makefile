@@ -18,7 +18,11 @@ TTF_FONTS_DIR?=		${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS+=	${TTF_FONTS_DIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/fonts/ttf/Mplus*.ttf ${DESTDIR}${TTF_FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/MPLUS1/ttf/*.ttf ${DESTDIR}${TTF_FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/MPLUS1Code/ttf/*.ttf ${DESTDIR}${TTF_FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/MPLUS2/ttf/*.ttf ${DESTDIR}${TTF_FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/MPLUSCodeLatin/ttf/*.ttf ${DESTDIR}${TTF_FONTS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/fonts/MPLUSU/ttf/*.ttf ${DESTDIR}${TTF_FONTS_DIR}
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
