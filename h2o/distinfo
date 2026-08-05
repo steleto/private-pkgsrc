@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.14 2021/10/26 11:29:29 nia Exp $
+
+BLAKE2s (h2o-20260804-706842c0f8c0d9422efb97a4d8ef7d6ec9df87b7.tar.gz) = a52bd28dbb4c96aa187f64d278886d0bbf899560e837f461c69dd118fcea21ed
+SHA512 (h2o-20260804-706842c0f8c0d9422efb97a4d8ef7d6ec9df87b7.tar.gz) = 0770fef6cb7ca91b377234272d6eda034e47f5fbd9c9f9b3ae09060879286bb5c62e46ecb1b0b611cd159f4957a3d6f497940ac68f177118b7889f69b475d632
+Size (h2o-20260804-706842c0f8c0d9422efb97a4d8ef7d6ec9df87b7.tar.gz) = 7162735 bytes
+SHA1 (patch-deps_mruby-digest_src_picohash.h) = 6c1d15584c6c16e2764a56e129ccb961d99bd446
+SHA1 (patch-deps_neverbleed_neverbleed.c) = 52e8ff01fdb3ebedac06cbafedde1dd04a35aecc
+SHA1 (patch-lib_handler_headers__util.c) = 136d7f76c5376883de9a35130ba7008c27b15030

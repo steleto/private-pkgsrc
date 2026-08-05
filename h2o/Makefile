@@ -1,0 +1,44 @@
+# $NetBSD: Makefile,v 1.30 2025/08/20 11:35:13 wiz Exp $
+
+DISTNAME=	h2o-20260804
+CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_GITHUB:=h2o/}
+GITHUB_TAG=	706842c0f8c0d9422efb97a4d8ef7d6ec9df87b7
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/h2o/h2o
+COMMENT=	Optimized HTTP server with support for HTTP/1.x and HTTP/2
+LICENSE=	mit
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		perl:run pkg-config
+PKGCONFIG_OVERRIDE+=	libh2o-evloop.pc.in
+PKGCONFIG_OVERRIDE+=	libh2o.pc.in
+
+CMAKE_CONFIGURE_ARGS+=	-DWITH_BUNDLED_SSL=off
+# TODO: make it an option
+CMAKE_CONFIGURE_ARGS+=	-DBUILD_SHARED_LIBS=on
+CMAKE_CONFIGURE_ARGS+=	-DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+# error: 'for' loop initial declarations are only allowed in C99 mode
+FORCE_C_STD=		gnu99
+
+SUBST_CLASSES+=		interp
+SUBST_STAGE.interp=	post-extract
+SUBST_MESSAGE.interp=	Fixing interpreter.
+SUBST_FILES.interp=	share/h2o/*
+SUBST_SED.interp=	-e 's,^\#\! /bin/sh,\#\!/bin/perl,'
+SUBST_SED.interp+=	-e '/^exec perl/d'
+SUBST_SED.interp+=	-e '/\#\! perl/d'
+
+REPLACE_PERL=		share/h2o/*
+
+.include "options.mk"
+
+.include "../../devel/cmake/build.mk"
+.include "../../devel/libuv/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/libyaml/buildlink3.mk"
+.include "../../www/wslay/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
