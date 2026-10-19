@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	massivethreads-1.00
+DISTNAME=	massivethreads-1.02
 CATEGORIES=	parallel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=massivethreads/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
